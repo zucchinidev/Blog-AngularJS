@@ -1,0 +1,25 @@
+<form ng-submit="savePost()">
+    <div class="card">
+        <div class="p+">
+            <div flex-container="row">
+                <div flex-item="">
+                    <lx-text-field label="Título del post">
+                        <input type="text" ng-model="post.title"/>
+                    </lx-text-field>
+                </div>
+            </div>
+            <div flex-container="row">
+                <div flex-item="">
+                    <lx-text-field label="Contenido">
+                        <textarea ng-model="post.body"></textarea>
+                    </lx-text-field>
+                </div>
+            </div>
+            <div class="card_actions">
+                <button class="btn btn--m btn--raised bgc-red-300 tc-white">
+                    Save
+                </button>
+            </div>
+        </div>
+    </div>
+</form>

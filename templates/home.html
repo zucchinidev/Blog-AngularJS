@@ -1,0 +1,60 @@
+<lx-tabs links-tc="grey-200" layout="inline" links-bgc="light-white-500"
+         indicator="red-300" no-divider="false" z-depth="1">
+    <lx-tab heading="Post">
+        <div class="p+">
+            <div class="card" ng-repeat="post in posts">
+                <div class="p+">
+                    <strong class="fs-headline display-block tc-red-500">
+                        {{ post.title }}
+                    </strong>
+                    <div class="paragraph fs-body-1 display-block mt+1">
+                        {{ post.body }}
+                    </div>
+                </div>
+                <div class="card__actions">
+                    <a class="btn btn--m btn--raised bgc-light-blue-300 tc-white"
+                       href="#/post/{{ post.id }}">
+                        View
+                    </a>
+                    <a class="btn btn--m btn--raised bgc-teal-300 tc-white"
+                       href="#/post/edit/{{ post.id }}">
+                        Edit
+                    </a>
+                    <a class="btn btn--m btn--raised bgc-red-300 tc-white"
+                       ng-click="removePost(post)">
+                        Eliminar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </lx-tab>
+
+    <lx-tab heading="Users">
+        <div class="p+">
+            <div class="card" ng-repeat="user in users">
+                <div flex-container="row">
+                    <div class="card__img card__img--left" style="height: 160px;">
+                        <img src="http://ui.lumapps.com/images/placeholder/3-vertical.jpg" alt="User"/>
+                    </div>
+                    <div flex-item flex-container="column">
+                        <div flex-item>
+                            <p class="p+">
+                                <strong class="fs-headline display-block">
+                                    {{ user.name }}
+                                </strong>
+                                <span class="fs-subhead tc-red-400 display-block">
+                                    {{ user.email }}
+                                </span>
+                            </p>
+                        </div>
+                        <div class="card__actions">
+                            <a href="" class="btn btn--m btn--raised bgc-red-300 tc-white">
+                                Ver user
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </lx-tab>
+</lx-tabs>

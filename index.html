@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html class="bgc-blue-grey-50" ng-app="APP">
+<head lang="es">
+    <meta charset="UTF-8">
+    <title>
+        Blog
+    </title>
+    <link rel="stylesheet" href="lib/mdi/css/materialdesignicons.css"/>
+    <link rel="stylesheet" href="lib/lumx/dist/lumx.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:500,300,700,400' rel='stylesheet' />
+    <style>
+        li {
+            width: 50%;
+        }
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="bgc-red-300 tc-white" flex-container="row" flex-align="center center">
+            <div flex-item="4">
+                <h1 class="fs-display-2 display-block">
+                    App Post
+                </h1>
+            </div>
+            <div flex-item="1">
+                <a href="#/" class="tc-white">
+                    Inicio
+                </a>
+            </div>
+            <div flex-item="1">
+                <a href="#/posts/new" class="tc-white">
+                    Crear post
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+    <div flex-container="row" flex-align="center">
+        <div flex-item="9" ng-view></div>
+    </div>
+    <script src="lib/jquery/dist/jquery.js"></script>
+    <script src="lib/velocity/velocity.js"></script>
+    <script src="lib/moment/min/moment-with-locales.js"></script>
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-resource/angular-resource.js"></script>
+    <script src="lib/angular-route/angular-route.js"></script>
+    <script src="lib/lumx/dist/lumx.js"></script>
+    <script src="app.js"></script>
+    <script src="controllers.js"></script>
+    <script src="services.js"></script>
+</body>
+</html>
